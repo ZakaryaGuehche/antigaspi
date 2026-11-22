@@ -1,13 +1,16 @@
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-from sqlalchemy import select
+from sqlalchemy import select, text
 from sqlalchemy.orm import Session
 
 from app.database import Base, engine, get_db
 from app.models import Panier
 
-Base.metadata.create_all(bind=engine)
+with engine.begin() as connexion:
+    if connexion.dialect.name == "postgresql":
+        connexion.execute(text("SELECT pg_advisory_xact_lock(42)"))
+    Base.metadata.create_all(bind=connexion)
 
 app = FastAPI(title="AntiGaspi API")
 
