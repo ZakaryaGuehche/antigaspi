@@ -7,12 +7,10 @@ from sqlalchemy.orm import Session
 from app.database import Base, engine, get_db
 from app.models import Panier
 
-# Crée la table au démarrage si elle n'existe pas
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="AntiGaspi API")
 
-# Autorise le front à appeler l'API depuis un autre port en local
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 

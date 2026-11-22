@@ -24,7 +24,6 @@ Projet du cours Conteneurisation et orchestration (ESILV).
 - develop : branche de travail
 - feature/* : une branche par fonctionnalité, mergée dans develop
 
-## Utilisation de l'IA
 
 ## Utilisation de l'IA
 
