@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: antigaspi-config
+  namespace: antigaspi
+data:
+  DB_HOST: postgres
+  DB_PORT: "5432"
+  DB_NAME: antigaspi
+  DB_USER: antigaspi
