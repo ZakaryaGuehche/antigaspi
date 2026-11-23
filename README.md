@@ -171,7 +171,7 @@ Les tests utilisent une base SQLite locale : ils couvrent la santé, la créatio
 
 ## Utilisation de l'IA
 
-J'ai utilisé Claude (Anthropic) comme assistant sur ce projet. Le code a été relu, testé et compris par mes soins, puis mis en ligne par moi-même.
+J'ai utilisé Claude IA comme assistant sur quelques points de ce projet. Le code a été relu, testé et compris par mes soins, puis mis en ligne par moi-même.
 
 ## Pistes d'amélioration
 
